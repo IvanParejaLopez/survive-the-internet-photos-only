@@ -24,8 +24,7 @@ With this mod, **all 4 rounds** (the game's default) are Photo rounds.
 ## Installation
 
 1. **Close the game.**
-2. Go to the game's root folder, the one containing `SurviveTheInternet.swf`, `Localization.json` and `PauseContent.swf`.
-   <!-- TODO: add the exact path on your system / how to open it (e.g. Steam → Properties → Local Files → Browse). -->
+2. Go to the game's root folder, the one containing `SurviveTheInternet.swf`, `Localization.json` and `PauseContent.swf`. For EpicGames is located probabli on: "Program Files\Epic Games\JackboxPartyPack4\games\SurviveTheInternet"
 3. **Make a backup of the original file** (strongly recommended):
    rename or copy `SurviveTheInternet.swf` to `SurviveTheInternet.swf.bak`.
 4. Copy the modded `SurviveTheInternet.swf` from this repository into that folder, replacing the original.
@@ -35,14 +34,13 @@ With this mod, **all 4 rounds** (the game's default) are Photo rounds.
 
 Delete the modded `SurviveTheInternet.swf` and restore your backup (rename `SurviveTheInternet.swf.bak` back to `SurviveTheInternet.swf`).
 If anything goes wrong, or after a game update, use your game launcher's "Verify integrity of game files" to restore the original.
-<!-- TODO: confirm the exact wording/steps for your platform (Steam, Epic, etc.). -->
 
 ---
 
 ## Known limitations
 
 - The main menu, lobby and the rest of the game flow are unchanged. Only the category selection is modified.
-- Rounds 1–3 now use a category that was originally only used in the final round. In testing, the game worked for at least 2 rounds. <!-- TODO: update this line after you've played a full game (all 4 rounds + end screen). -->
+- Rounds 1–3 now use a category that was originally only used in the final round.
 - A game update may overwrite the modded file.
 
 ---
@@ -107,13 +105,12 @@ Exactly one byte differs between the original and the modded file once both are 
 
 **Original:**
 
-<!-- TODO: add screenshot of the ORIGINAL file in JPEXS, e.g. docs/images/jpexs-before.png -->
-![Before: original SurviveTheInternet.swf in JPEXS](docs/images/jpexs-before.png)
+<img width="2263" height="1086" alt="Captura de pantalla 2026-10-31 000545" src="https://github.com/user-attachments/assets/59695d38-f4a0-4821-b6ef-c46f8279c22f" />
+
 
 **Modded:**
 
-<!-- TODO: add screenshot of the MODDED file in JPEXS, e.g. docs/images/jpexs-after.png -->
-![After: modded SurviveTheInternet.swf in JPEXS](docs/images/jpexs-after.png)
+<img width="2170" height="1017" alt="Captura de pantalla 2026-10-30 232039" src="https://github.com/user-attachments/assets/c5e934b4-f041-4e20-9f3d-2087b7240f69" />
 
 ---
 
@@ -125,8 +122,6 @@ If you would rather patch your own copy instead of downloading a modified file:
 2. Open it in JPEXS and go to `GameState` → `setupCurrentRound` → P-code.
 3. At offset 186, change `pushstring "STITheme"` to `pushstring "STIFinalRoundTheme"`.
 4. Save the SWF and replace the file in the game folder.
-
-<!-- TODO (optional): add a small patch script (e.g. patch.py) here if you decide to include one. -->
 
 ---
 
@@ -143,19 +138,14 @@ These are available in the game's own defaults (`Global.handleActionInit`), but 
 
 - Game: Survive the Internet, *The Jackbox Party Pack 4*
 - Build: `buildVersion 16`, build timestamp `2024-08-07 16:30:20` (from `jbg.config.jet`)
-- Platform: <!-- TODO: PC / Steam / other -->
-- Language: <!-- TODO: language you tested with (the localization files provided were Spanish) -->
+- Platform: Steam / Epic Games
 
 ## Distribution note
 
-`SurviveTheInternet.swf` is copyrighted game code owned by Jackbox Games. Consider publishing only the instructions (and optionally a patch script) rather than the modified `.swf` itself.
-<!-- TODO: decide, then delete or adjust this section. -->
-
-## License
-
-<!-- TODO: choose a license for your own text/scripts in this repo (e.g. MIT). It does not cover the game or its files. -->
+`SurviveTheInternet.swf` is copyrighted game code owned by Jackbox Games.
 
 ## Credits
 
 - Game and content © Jackbox Games.
+- [JPEXS](https://github.com/jindrapetrik/jpexs-decompiler).
 - Analysis done with the help of Claude (Anthropic); verification with JPEXS Free Flash Decompiler.
